@@ -3,7 +3,7 @@
 - name: check if terraform-docs folder exists
   stat: 
     path: /opt/terraform-docs
-  register: terraform-docs_io_folder_exists
+  register: terraform_docs_io_folder_exists
   tags: terraform-docs
   
 - name: Create terraform-docs directory
@@ -36,7 +36,7 @@
 
 - name: Verify terraform-docs exists
   stat: path=/opt/terraform-docs/terraform-docs
-  register: terraform-docs_io_stat
+  register: terraform_docs_io_stat
   tags: terraform-docs
 
 - name: Configure terraform-docs on system bin.
