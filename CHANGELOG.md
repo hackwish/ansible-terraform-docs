@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/hackwish/ansible-terraform-docs/compare/v1.1.0...v1.1.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* **ansible:** fix register check ([8b5efcc](https://github.com/hackwish/ansible-terraform-docs/commit/8b5efcc66edb2c78b4271dac3a03b5596e381695))
+
 # [1.1.0](https://github.com/hackwish/ansible-terraform-docs/compare/v1.0.0...v1.1.0) (2021-10-15)
 
 
