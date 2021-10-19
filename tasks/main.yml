@@ -12,7 +12,7 @@
     state: directory
     mode: '0755'
   tags: terraform-docs
-  when: terraform-docs_io_folder_exists.stat.exists == False
+  when: terraform_docs_io_folder_exists.stat.exists == False
 
 - name: Get latest Release from terraform-docs
   shell: curl -Lo /opt/terraform-docs/terraform-docs.tar.gz https://github.com/terraform-docs/terraform-docs/releases/download/$(curl -s https://api.github.com/repos/terraform-docs/terraform-docs/releases/latest | grep tag_name | cut -d '"' -f 4)/terraform-docs-$(curl -s https://api.github.com/repos/terraform-docs/terraform-docs/releases/latest | grep tag_name | cut -d '"' -f 4)-linux-amd64.tar.gz
