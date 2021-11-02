@@ -21,7 +21,7 @@
   tags: terraform-docs
 
 - name: Unarchive a file
-  shell: tar -xzf /opt/terraform-docs/terraform-docs.tar.gz --strip-components 1 --wildcards --no-anchored 'terraform-docs' -C /opt/terraform-docs/
+  shell: tar -xzf /opt/terraform-docs/terraform-docs.tar.gz -C /opt/terraform-docs/
   args:
     warn: no
   tags: terraform-docs
