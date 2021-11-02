@@ -44,7 +44,7 @@
     src: "/opt/terraform-docs/terraform-docs"
     dest: "/usr/bin/terraform-docs"
     state: link
-  when: terraform-docs_io_stat.stat.exists
+  when: terraform_docs_io_stat.stat.exists
   tags: terraform-docs
 
 - name: Configure terraform-docs on system sbin.
@@ -52,7 +52,7 @@
     src: "/opt/terraform-docs/terraform-docs" 
     dest: "/usr/sbin/terraform-docs"
     state: link
-  when: terraform-docs_io_stat.stat.exists
+  when: terraform_docs_io_stat.stat.exists
   tags: terraform-docs
 
 # Customize Per existing user
@@ -68,7 +68,7 @@
 
 - name: Create user bin directory
   file: path=/home/{{ item }}/.local/bin/ state=directory mode="a+rw"
-  when: terraform-docs_io_stat.stat.exists
+  when: terraform_docs_io_stat.stat.exists
   with_items: "{{ users.stdout_lines }}"
   tags: terraform-docs
 
@@ -78,12 +78,12 @@
     dest: "/home/{{ item }}/.local/bin/terraform-docs"
     state: link
   with_items: "{{ users.stdout_lines }}"
-  when: terraform-docs_io_stat.stat.exists
+  when: terraform_docs_io_stat.stat.exists
   tags: terraform-docs
 
 - name: Create user bin directory
   file: path=/home/{{ item }}/.local/bin/ state=directory mode="a+rw"
-  when: terraform-docs_io_stat.stat.exists
+  when: terraform_docs_io_stat.stat.exists
   with_items: "{{ users.stdout_lines }}"
   tags: terraform-docs
 
