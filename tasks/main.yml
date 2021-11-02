@@ -107,13 +107,13 @@
 - shell: which terraform-docs
   args:
     executable: /bin/bash -ilc
-  register: which_terraform-docs_io
+  register: which_terraform_docs_io
   failed_when: false
   changed_when: false
   tags: terraform-docs
 
 - debug:
-    var:  which_terraform-docs_io.stdout
+    var:  which_terraform_docs_io.stdout
     verbosity: 2
 
 - command: terraform-docs version
