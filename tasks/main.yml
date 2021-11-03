@@ -117,11 +117,11 @@
     verbosity: 2
 
 - command: terraform-docs version
-  register: result_terraform-docs_io
+  register: result_terraform_docs_io
   failed_when: false
   changed_when: false
   tags: terraform-docs
 
 - debug:
-    var: result_terraform-docs_io.stdout
+    var: result_terraform_docs_io.stdout
   tags: terraform-docs
